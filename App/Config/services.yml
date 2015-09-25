@@ -1,0 +1,37 @@
+twig:
+  class: Silex\Provider\TwigServiceProvider
+  parameters:
+    twig.path: "%app_path%/views"
+    twig.templates: 
+      form: "%app_path%/views/form_div_layout.html.twig"
+
+#https://github.com/silexphp/Silex/wiki/Third-Party-ServiceProviders#database
+idiorm:
+  class: Arseniew\Silex\Provider\IdiormServiceProvider
+  parameters:
+    idiorm.db.options:
+      connection_string: 'mysql:host=localhost;dbname=tslanding'
+      username: 'root'
+      password : '1234'
+
+url_generator:
+    class: Silex\Provider\UrlGeneratorServiceProvider
+
+session:
+    class: Silex\Provider\SessionServiceProvider
+
+service_controller:
+   class: Silex\Provider\ServiceControllerServiceProvider
+
+swift_mailer:
+   class: Silex\Provider\SwiftmailerServiceProvider
+
+form:
+   class: Silex\Provider\FormServiceProvider
+
+translation:
+   class: Silex\Provider\TranslationServiceProvider
+   parameters:
+     locale_fallback: 'es'
+     translator.messages:
+       Hola: Hi

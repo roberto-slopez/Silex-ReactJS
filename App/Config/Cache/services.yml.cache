@@ -1,0 +1,59 @@
+<?php return array (
+  'twig' => 
+  array (
+    'class' => 'Silex\\Provider\\TwigServiceProvider',
+    'parameters' => 
+    array (
+      'twig.path' => '/home/ts/Proyectos/Silex-ReactJS/App/../views',
+      'twig.templates' => 
+      array (
+        'form' => '/home/ts/Proyectos/Silex-ReactJS/App/../views/form_div_layout.html.twig',
+      ),
+    ),
+  ),
+  'idiorm' => 
+  array (
+    'class' => 'Arseniew\\Silex\\Provider\\IdiormServiceProvider',
+    'parameters' => 
+    array (
+      'idiorm.db.options' => 
+      array (
+        'connection_string' => 'mysql:host=localhost;dbname=tslanding',
+        'username' => 'root',
+        'password' => '1234',
+      ),
+    ),
+  ),
+  'url_generator' => 
+  array (
+    'class' => 'Silex\\Provider\\UrlGeneratorServiceProvider',
+  ),
+  'session' => 
+  array (
+    'class' => 'Silex\\Provider\\SessionServiceProvider',
+  ),
+  'service_controller' => 
+  array (
+    'class' => 'Silex\\Provider\\ServiceControllerServiceProvider',
+  ),
+  'swift_mailer' => 
+  array (
+    'class' => 'Silex\\Provider\\SwiftmailerServiceProvider',
+  ),
+  'form' => 
+  array (
+    'class' => 'Silex\\Provider\\FormServiceProvider',
+  ),
+  'translation' => 
+  array (
+    'class' => 'Silex\\Provider\\TranslationServiceProvider',
+    'parameters' => 
+    array (
+      'locale_fallback' => 'es',
+      'translator.messages' => 
+      array (
+        'Hola' => 'Hi',
+      ),
+    ),
+  ),
+);
